@@ -1,0 +1,12 @@
+
+
+#LinkButton
+{
+	/* border-color: rgb(196, 36, 36); */
+	border: black 3px solid;
+	border-radius: 1px;
+
+
+	text-emphasis-color: #a01f1f;
+	color: #7abd33;
+}
