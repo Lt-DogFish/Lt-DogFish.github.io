@@ -3,23 +3,20 @@
 	box-sizing: border-box;
 }
 
-@property --offset {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 0px;
-}
-
 body{
-	background-color: #005f60;
+	background-color: #1c1c1c;
+	padding: 0px;
+	margin: 0px;
 }
 
-
-.header{
+.NavBar
+{
 	overflow:hidden;
+	background-color: white;
 	font-family: 'Helvetica Neue';
 }
 
-.header a
+.NavBar a
 {
 	float: left;
 	display: block;
@@ -27,47 +24,61 @@ body{
 	text-align: center;
 	padding: 15px 20px;
 	text-decoration: none;
-
+	font-weight: bold;
 	background-color: white;
 
-	background: linear-gradient(to bottom, #ff6400 50%, #b3dee5 50%) top;
+	background: linear-gradient(to bottom, white 50%, #ff6400 50%) top;
 	background-size: 100% 200%;
 
-	
-	transition:  .3s cubic-bezier(.77,.12,.16,.95);
+	transition: .3s cubic-bezier(.77,.12,.16,.95);
 
 }
 
-.header a:hover
+.NavBar p
 {
-	/* background-color: darkorange; */
-	text-transform: translateY(-10px);
+	margin: 0px;
+	transition: transform .3s cubic-bezier(.77,.12,.16,.95);
+}
+
+.NavBar a:hover
+{
 	background-position: bottom;
 	color: rgb(255, 255, 255);
 }
 
+.NavBar a:hover p
+{
+	transform: translateY(-7px);
+}
 
-.HoverUnderlineAnim {
+
+.HoverUnderlineAnim 
+{
   display: inline-block;
   position: relative;
 }
 
-.HoverUnderlineAnim::after {
+.HoverUnderlineAnim::after 
+{
   content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 5px;
+  height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #249ea0;
-  transform-origin: bottom right;
+  background-color: #ffffff;
+  /* set start and end position of udnerline*/
+  transform-origin: top;
   transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
 }
 
-.HoverUnderlineAnim:hover::after {
+.HoverUnderlineAnim:hover::after 
+{
   transform: scaleX(1);
-  transform-origin: bottom left;
+
+  /* set start and end position of udnerline*/
+  transform-origin: bottom;
 }
 
 
