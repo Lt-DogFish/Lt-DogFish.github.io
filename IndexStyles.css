@@ -22,33 +22,45 @@ body{
 	display: block;
 	color: rgb(24, 6, 6);
 	text-align: center;
-	padding: 15px 20px;
+	padding: 30px 45px;
 	text-decoration: none;
 	font-weight: bold;
+	font-size: 25px;
 	background-color: white;
+
 
 	background: linear-gradient(to bottom, white 50%, #ff6400 50%) top;
 	background-size: 100% 200%;
 
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
-
+	
 }
 
 .NavBar p
 {
 	margin: 0px;
 	transition: transform .3s cubic-bezier(.77,.12,.16,.95);
+	
+
 }
+
+
 
 .NavBar a:hover
 {
 	background-position: bottom;
 	color: rgb(255, 255, 255);
+
+	box-shadow: #1c1c1c 0px 0px 0px 0px inset, #f9f9f9 0px 0px 4px 6px inset;
+	text-shadow: 0px 0px 5px #ffffff, 15px 15px 1px #373737, 30px 30px 2px #707070;
+	
+
 }
 
 .NavBar a:hover p
 {
 	transform: translateY(-7px);
+	
 }
 
 
@@ -67,7 +79,8 @@ body{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffffff;
+  background-color: #ff6400;
+  box-shadow: #ffffff 0px -3px 20px 2px ;
   /* set start and end position of udnerline*/
   transform-origin: top;
   transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
