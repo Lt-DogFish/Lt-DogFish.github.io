@@ -6,13 +6,13 @@
 :root
 {
 	--NeonOrange:#ff6d1f;
-	--Gray: #222222;
-	--Beige:  #f5e7c6;
-	--LightBeige:	#faf3e1;
+	--Gray: #242424;
+	--Beige:  #ffffff;
+	--LightBeige:	#ffffff;
 }
 
 body{
-	background-color: var(--Gray);
+	background-color: var(--Beige);
 	padding: 0px;
 	margin: 0px;
 }
@@ -23,7 +23,7 @@ body{
 	overflow:hidden;
 	background-color: var(--Gray);
 	font-family: 'Helvetica Neue';
-	border-bottom: 1px var(--LightBeige) solid;
+	border-bottom: 1px var(--Beige) solid;
 }
 
 /* MenuTab buttons/ Navigation buttons in top bar*/
@@ -33,9 +33,9 @@ body{
 	display: block;
 	color: var(--LightBeige);
 	text-align: center;
-	padding: 15px 45px;
+	padding: 10px 45px;
 	text-decoration: none;
-	font-weight: bolder;
+	/*font-weight: bolder;*/
 	font-size: 20px;
 	background-color: var(--Beige);
 
