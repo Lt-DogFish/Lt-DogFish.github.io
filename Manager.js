@@ -12,11 +12,23 @@ function fetchHtml(path)
 	
 }
 */
+const Main = document.getElementById("main");
 
-const Button = document.getElementById("button-name");
 
-Button.addEventListener("click", () => 
+const Home = document.getElementById("home");
+Home.addEventListener("click", () => 
 {
-	//afbiwubfwe
-	// Do sum
+	Main.innerHTML = "<div class='MenuTab'> Test Worked for Home </div>";
+});
+
+const Profile = document.getElementById("profile");
+Profile.addEventListener("click", () => 
+{
+	Main.innerHTML = "<div class='MenuTab'> Test Worked for Profile </div>";
+});
+
+const Projects = document.getElementById("projects");
+Projects.addEventListener("click", () => 
+{
+	Main.innerHTML = "<div class='MenuTab'> Test Worked for Projects </div>";
 });
