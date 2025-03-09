@@ -1,34 +1,23 @@
-/*
-function fetchHtml(path)
-{
-	
-	try {
-		fetch(path).then((response) => {return response.text();}).then((html) => {document.body.innerHTML = html});
+const Main = document.getElementById("main");
+const Home = document.getElementById("home");
+fetchAndSetInnerHtml("home.html");
+const Profile = document.getElementById("profile");
+const Projects = document.getElementById("projects");
 
+
+async function fetchAndSetInnerHtml(path)
+{
+	try
+	{
+		await fetch(path).then(response => response.text()).then(fetchedHtml => Main.innerHTML = fetchedHtml);
 	}
-	catch(err){
+	catch(err)
+	{
 		console.log(err);
 	}
-	
 }
-*/
-const Main = document.getElementById("main");
 
-
-const Home = document.getElementById("home");
-Home.addEventListener("click", () => 
-{
-	Main.innerHTML = "<div class='MenuTab'> Test Worked for Home </div>";
-});
-
-const Profile = document.getElementById("profile");
-Profile.addEventListener("click", () => 
-{
-	Main.innerHTML = "<div class='MenuTab'> Test Worked for Profile </div>";
-});
-
-const Projects = document.getElementById("projects");
-Projects.addEventListener("click", () => 
-{
-	Main.innerHTML = "<div class='MenuTab'> Test Worked for Projects </div>";
-});
+//Home.addEventListener("click", () => fetchAndSetInnerHtml("index.html"));
+Home.addEventListener("click", () => fetchAndSetInnerHtml("home.html"));
+Profile.addEventListener("click", () => fetchAndSetInnerHtml("profilePage.html"));
+Projects.addEventListener("click", () => fetchAndSetInnerHtml("projectsPage.html"));
