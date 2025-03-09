@@ -5,22 +5,22 @@
 
 :root
 {
-	--NeonOrange:#ff6d1f;
-	--Gray: #242424;
-	--Beige:  #ffffff;
-	--LightBeige:	#ffffff;
+	--Primary:#ff6d1f;
+	--Secondary: #242424;
+	--Secondary2:  #ffffff;
+	--Accent:	#ffffff;
 
 	--Orange: #fc7449;
 	--BaseLight1: #e6e0dc;
-	--BaseLight2: #c1ad9b;
-	--Base1: #c6beb4;
-	--Base2: #bebab6;
-	--Secondary1: #b8b8b8;
+	--Biege1: #c1ad9b;
+	--Biege2: #c6beb4;
+	--Gray1: #bebab6;
+	--Gray2: #b8b8b8;
 
 }
 
 body{
-	background-color: var(--Beige);
+	background-color: var(--Secondary2);
 	padding: 0px;
 	margin: 0px;
 }
@@ -29,9 +29,9 @@ body{
 .TopBar
 {
 	overflow:hidden;
-	background-color: var(--Gray);
+	background-color: var(--Secondary);
 	font-family: 'Helvetica Neue';
-	border-bottom: 1px var(--Beige) solid;
+	border-bottom: 1px var(--Secondary2) solid;
 }
 
 /* MenuTab buttons/ Navigation buttons in top bar*/
@@ -39,15 +39,15 @@ body{
 {
 	float: left;
 	display: block;
-	color: var(--LightBeige);
+	color: var(--Accent);
 	text-align: center;
 	padding: 10px 45px;
 	text-decoration: none;
 	/*font-weight: bolder;*/
 	font-size: 20px;
-	background-color: var(--Beige);
+	background-color: var(--Secondary2);
 
-	background: linear-gradient(to bottom, var(--Gray) 50%, var(--LightBeige) 50%) top;
+	background: linear-gradient(to bottom, var(--Secondary) 50%, var(--Accent) 50%) top;
 	background-size: 100% 200%;
 
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
@@ -66,9 +66,9 @@ body{
 .TopBar .MenuTab:hover
 {
 	background-position: bottom;
-	color: var(--Gray);
+	color: var(--Secondary);
 
-	box-shadow: var(--Beige) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
+	box-shadow: var(--Secondary2) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
 	/*text-shadow: 0px 0px 5px #ffffff  /*, 15px 15px 1px #373737, 30px 30px 2px #707070;*/
 	
 
@@ -96,7 +96,7 @@ body{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--Gray);
+  background-color: var(--Secondary);
   /*box-shadow: #ffffff 0px -3px 20px 2px ;*/
   /* set start and end position of udnerline*/
   transform-origin: top;
