@@ -1,6 +1,6 @@
 const Main = document.getElementById("main");
 const Home = document.getElementById("home");
-fetchAndSetInnerHtml("home.html");
+fetchAndSetInnerHtml("homePage.html");
 const Profile = document.getElementById("profile");
 const Projects = document.getElementById("projects");
 
@@ -18,6 +18,6 @@ async function fetchAndSetInnerHtml(path)
 }
 
 //Home.addEventListener("click", () => fetchAndSetInnerHtml("index.html"));
-Home.addEventListener("click", () => fetchAndSetInnerHtml("home.html"));
+Home.addEventListener("click", () => fetchAndSetInnerHtml("homePage.html"));
 Profile.addEventListener("click", () => fetchAndSetInnerHtml("profilePage.html"));
 Projects.addEventListener("click", () => fetchAndSetInnerHtml("projectsPage.html"));
