@@ -5,10 +5,10 @@
 
 :root
 {
-	--Primary:#ff6d1f;
+	/*--Primary:#ff6d1f; Older colors
 	--Secondary: #242424;
 	--Secondary2:  #ffffff;
-	--Accent:	#ffffff;
+	--Accent:	#ffffff;*/
 
 	--Orange: #fc7449;
 	--BaseLight1: #e6e0dc;
@@ -17,6 +17,12 @@
 	--Gray1: #bebab6;
 	--Gray2: #b8b8b8;
 
+
+
+	--Primary: var(--Orange);
+	--Secondary: var(--Biege1);
+	--Secondary2:  var(--BaseLight1);
+	--Accent:	var(--Gray2);
 }
 
 body{
