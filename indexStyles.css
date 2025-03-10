@@ -1,7 +1,7 @@
 *
 {
 	box-sizing: border-box;
-	font-family: 'Helvetica Neue';
+	font-family: 'Optima';
 }
 
 :root
@@ -15,6 +15,10 @@
 
 	--MudBrown: #896c67;
 	--PaleOrange: #ec8e75;
+	--ScotchBiege: #eac9aa;
+	--BananaYellow: #f6dda7;
+	--HamamamGreen: #82a18f;
+
 
 
 	
@@ -24,15 +28,16 @@
 	--Gray1: #bebab6;
 	--Gray2: #b8b8b8;
 	--Black: #000000;
+	--White: #ffffff;
 
 
 
-	--Primary: var(--Biege1);
-	--Secondary: var(--BaseLight1);
-	--Secondary2:  var(--BaseLight1);
-	--Accent:	var(--Orange);
+	--Primary: var(--White);
+	--Secondary: var(--White);
+	--Secondary2:  var(--White);
+	--Accent:	var(--Black);
 
-	--Border1: var(--Orange);
+	--Border1: var(--Black);
 	--Text1: var(--Black);
 }
 
@@ -70,7 +75,17 @@ body
 	background: linear-gradient(to bottom, var(--Secondary) 50%, var(--Primary) 50%) top;
 	background-size: 100% 200%;
 
+	box-shadow: var(--Border1) -2px -2px 0px 2px inset ;
+
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
+}
+
+.TopBar
+{
+	padding-top: 10px ;
+	padding-left: 50px;
+	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
+	border: 1px;
 }
 
 .MenuTab p
@@ -87,6 +102,7 @@ body
 {
 	background-position: bottom;
 	color: var(--Text1);
+	padding: 10px 46px;
 
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
 	/*text-shadow: 0px 0px 5px #ffffff  /*, 15px 15px 1px #373737, 30px 30px 2px #707070;*/
@@ -96,8 +112,8 @@ body
 
 .TopBar .MenuTab:hover p
 {
-	transform: translateY(-7px);
-	
+	transform: translate(3px, 3px);
+
 }
 
 
