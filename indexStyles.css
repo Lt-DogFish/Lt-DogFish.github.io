@@ -1,14 +1,22 @@
 *
 {
 	box-sizing: border-box;
+	font-family: 'Helvetica Neue';
 }
 
 :root
 {
+
+	--NeonOrange: #ff6d1f;
+	--Gray: #242424;
+	--Beige: #ffffff;
+	--LightBeige: #ffffff;
+
 	/*--Primary:#ff6d1f; Older colors
 	--Secondary: #242424;
 	--Secondary2:  #ffffff;
 	--Accent:	#ffffff;*/
+
 
 	--Orange: #fc7449;
 	--BaseLight1: #e6e0dc;
@@ -25,6 +33,7 @@
 	--Accent:	var(--Gray2);
 }
 
+
 body{
 	background-color: var(--Secondary2);
 	padding: 0px;
@@ -34,6 +43,7 @@ body{
 /* Top Bar with all Navigation MenuButtons*/
 .TopBar
 {
+
 	overflow:hidden;
 	background-color: var(--Secondary);
 	font-family: 'Helvetica Neue';
@@ -89,12 +99,13 @@ body{
 
 .ElementWithUnderlineAnim 
 {
-  display: inline-block;
-  position: relative;
+	display: inline-block;
+	position: relative;
 }
 
 .ElementWithUnderlineAnim::after 
 {
+
   content: '';
   position: absolute;
   width: 100%;
@@ -107,15 +118,24 @@ body{
   /* set start and end position of udnerline*/
   transform-origin: top;
   transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
+
 }
 
 .ElementWithUnderlineAnim:hover::after 
 {
-  transform: scaleX(1);
+	transform: scaleX(1);
 
-  /* set start and end position of udnerline*/
-  transform-origin: bottom;
+	/* set start and end position of udnerline*/
+	transform-origin: bottom;
 }
 
 
 
+#main
+{
+	display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
