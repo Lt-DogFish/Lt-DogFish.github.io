@@ -8,17 +8,16 @@
 {
 
 	--NeonOrange: #ff6d1f;
+	--Orange: #fc7449;
 	--Gray: #242424;
 	--Beige: #ffffff;
 	--LightBeige: #ffffff;
 
-	/*--Primary:#ff6d1f; Older colors
-	--Secondary: #242424;
-	--Secondary2:  #ffffff;
-	--Accent:	#ffffff;*/
+	--MudBrown: #896c67;
+	--PaleOrange: #ec8e75;
 
 
-	--Orange: #fc7449;
+	
 	--BaseLight1: #e6e0dc;
 	--Biege1: #c1ad9b;
 	--Biege2: #c6beb4;
@@ -38,7 +37,8 @@
 }
 
 
-body{
+body
+{
 	background-color: var(--Secondary2);
 	padding: 0px;
 	margin: 0px;
@@ -142,4 +142,9 @@ body{
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+}
+
+#main.content
+{
+	flex: 1;
 }
