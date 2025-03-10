@@ -24,13 +24,17 @@
 	--Biege2: #c6beb4;
 	--Gray1: #bebab6;
 	--Gray2: #b8b8b8;
+	--Black: #000000;
 
 
 
-	--Primary: var(--Orange);
-	--Secondary: var(--Biege1);
+	--Primary: var(--Biege1);
+	--Secondary: var(--BaseLight1);
 	--Secondary2:  var(--BaseLight1);
-	--Accent:	var(--Gray2);
+	--Accent:	var(--Orange);
+
+	--Border1: var(--Orange);
+	--Text1: var(--Black);
 }
 
 
@@ -55,7 +59,7 @@ body{
 {
 	float: left;
 	display: block;
-	color: var(--Accent);
+	color: var(--Text1);
 	text-align: center;
 	padding: 10px 45px;
 	text-decoration: none;
@@ -63,7 +67,7 @@ body{
 	font-size: 20px;
 	background-color: var(--Secondary2);
 
-	background: linear-gradient(to bottom, var(--Secondary) 50%, var(--Accent) 50%) top;
+	background: linear-gradient(to bottom, var(--Secondary) 50%, var(--Primary) 50%) top;
 	background-size: 100% 200%;
 
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
@@ -82,9 +86,9 @@ body{
 .TopBar .MenuTab:hover
 {
 	background-position: bottom;
-	color: var(--Secondary);
+	color: var(--Text1);
 
-	box-shadow: var(--Secondary2) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
+	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
 	/*text-shadow: 0px 0px 5px #ffffff  /*, 15px 15px 1px #373737, 30px 30px 2px #707070;*/
 	
 
@@ -113,7 +117,7 @@ body{
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--Secondary);
+  background-color: var(--Border1);
   /*box-shadow: #ffffff 0px -3px 20px 2px ;*/
   /* set start and end position of udnerline*/
   transform-origin: top;
