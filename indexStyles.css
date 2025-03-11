@@ -33,12 +33,15 @@
 
 
 	--Primary: var(--White);
-	--Secondary: var(--White);
+	--Secondary: var(--Black);
 	--Secondary2:  var(--White);
+
 	--Accent:	var(--Black);
 
 	--Border1: var(--Black);
+
 	--Text1: var(--Black);
+	--TextInverted: var(--White);
 }
 
 
@@ -49,15 +52,6 @@ body
 	margin: 0px;
 }
 
-/* Top Bar with all Navigation MenuButtons*/
-.TopBar
-{
-
-	overflow:hidden;
-	background-color: var(--Secondary);
-	font-family: 'Helvetica Neue';
-	border-bottom: 1px var(--Secondary2) solid;
-}
 
 /* MenuTab buttons/ Navigation buttons in top bar*/
 .MenuTab 
@@ -72,7 +66,7 @@ body
 	font-size: 20px;
 	background-color: var(--Secondary2);
 
-	background: linear-gradient(to bottom, var(--Secondary) 50%, var(--Primary) 50%) top;
+	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
 
 	box-shadow: var(--Border1) -2px -2px 0px 2px inset ;
@@ -82,16 +76,22 @@ body
 
 .TopBar
 {
+	overflow:hidden;
+	background-color: var(--Primary);
+	font-family: 'Helvetica Neue';
+	border-bottom: 1px var(--Secondary2) solid;
 	padding-top: 10px ;
 	padding-left: 50px;
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
 	border: 1px;
+	/*color: var(--Primary);*/
 }
 
 .MenuTab p
 {
 	margin: 0px;
 	transition: transform .3s cubic-bezier(.77,.12,.16,.95);
+	font-weight: Bold;
 	
 
 }
@@ -103,6 +103,7 @@ body
 	background-position: bottom;
 	color: var(--Text1);
 	padding: 10px 46px;
+	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
 	/*text-shadow: 0px 0px 5px #ffffff  /*, 15px 15px 1px #373737, 30px 30px 2px #707070;*/
@@ -113,9 +114,23 @@ body
 .TopBar .MenuTab:hover p
 {
 	transform: translate(3px, 3px);
+	color: var(--TextInverted);
+	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 
 }
 
+.button.clicked
+{
+	animation: pop 0.5s cubic-bezier(.77,.12,.16,.95);
+}
+@keyframes pop {
+            0% 
+				{	padding: 10px 46px; 
+					
+				}
+            20% { padding: 8px 56px; transform: translate(-6px, 2px);}
+            100% { padding: 10px 46px; }
+}
 
 .ElementWithUnderlineAnim 
 {
