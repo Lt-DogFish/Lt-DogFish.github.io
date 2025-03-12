@@ -45,11 +45,21 @@
 }
 
 
-body
+
+
+
+
+.TopBar
 {
-	background-color: var(--Secondary2);
-	padding: 0px;
-	margin: 0px;
+	overflow:hidden;
+	background-color: var(--Primary);
+	font-family: 'Helvetica Neue';
+	border-bottom: 1px var(--Secondary2) solid;
+	padding-top: 10px ;
+	padding-left: 50px;
+	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
+	border: 1px;
+	/*color: var(--Primary);*/
 }
 
 
@@ -74,18 +84,7 @@ body
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
 }
 
-.TopBar
-{
-	overflow:hidden;
-	background-color: var(--Primary);
-	font-family: 'Helvetica Neue';
-	border-bottom: 1px var(--Secondary2) solid;
-	padding-top: 10px ;
-	padding-left: 50px;
-	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
-	border: 1px;
-	/*color: var(--Primary);*/
-}
+
 
 .MenuTab p
 {
@@ -166,6 +165,14 @@ body
 
 
 
+
+body
+{
+	background-color: var(--Secondary2);
+	padding: 0px;
+	margin: 0px;
+}
+
 #main
 {
 	display: flex;
@@ -181,6 +188,13 @@ body
 {
 	flex: 1;
 }
+
+
+
+
+
+
+
 
 .tekoFont {
   font-family: "Teko", sans-serif;
