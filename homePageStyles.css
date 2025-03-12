@@ -2,10 +2,23 @@
 
 .namePanel
 {
+	width: 100%;
 
 	font-weight: bold;
 	font-size: 300px;
 	line-height: 0.85;
 	align-self: start;
-	/*font-family: teko;*/
+
+}
+
+.top
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.namePanel.bottom
+{
+	background-color: #000000;
+	color: #ffffff;
 }

@@ -12,6 +12,7 @@
 	--Gray: #242424;
 	--Beige: #ffffff;
 	--LightBeige: #ffffff;
+	--LightRed: #ff4646;
 
 	--MudBrown: #896c67;
 	--PaleOrange: #ec8e75;
@@ -71,6 +72,7 @@
 	color: var(--Text1);
 	text-align: center;
 	padding: 10px 45px;
+	margin-bottom: 2px;
 	text-decoration: none;
 	/*font-weight: bolder;*/
 	font-size: 20px;
@@ -79,7 +81,7 @@
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
 
-	box-shadow: var(--Border1) -2px -2px 0px 2px inset ;
+	/*box-shadow: var(--Border1) -2px -2px 0px 2px inset ;*/
 
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
 }
@@ -101,7 +103,7 @@
 {
 	background-position: bottom;
 	color: var(--Text1);
-	padding: 10px 46px;
+	/*padding: 10px 46px;*/
 	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
@@ -112,23 +114,27 @@
 
 .TopBar .MenuTab:hover p
 {
-	transform: translate(3px, 3px);
 	color: var(--TextInverted);
 	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 
 }
 
-.button.clicked
+.MenuTab.button.clicked
 {
-	animation: pop 0.5s cubic-bezier(.77,.12,.16,.95);
+	animation: flash 0.1s ;
+	pointer-events: none;
 }
-@keyframes pop {
-            0% 
-				{	padding: 10px 46px; 
-					
-				}
-            20% { padding: 8px 56px; transform: translate(-6px, 2px);}
-            100% { padding: 10px 46px; }
+@keyframes pop 
+{
+    0% {	padding: 10px 46px; }
+    20% { padding: 8px 56px; transform: translate(-6px, 2px);}
+    100% { padding: 10px 46px; }
+}
+
+@keyframes flash 
+{
+	0% { background: black;}
+	100% {  background: linear-gradient(to bottom, var(--LightRed) 50%, var(--LightRed) 50%) top}
 }
 
 .ElementWithUnderlineAnim 
@@ -180,8 +186,6 @@ body
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-	background-image: url('Patima.jpeg');
-	background-size: 1440px;
 }
 
 #main.content
