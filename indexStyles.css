@@ -1,3 +1,7 @@
+@import url("colors.css");
+
+
+
 *
 {
 	box-sizing: border-box;
@@ -6,32 +10,6 @@
 
 :root
 {
-
-	--NeonOrange: #ff6d1f;
-	--Orange: #fc7449;
-	--Gray: #242424;
-	--Beige: #ffffff;
-	--LightBeige: #ffffff;
-	--LightRed: #ff4646;
-
-	--MudBrown: #896c67;
-	--PaleOrange: #ec8e75;
-	--ScotchBiege: #eac9aa;
-	--BananaYellow: #f6dda7;
-	--HamamamGreen: #82a18f;
-
-
-
-	
-	--BaseLight1: #e6e0dc;
-	--Biege1: #c1ad9b;
-	--Biege2: #c6beb4;
-	--Gray1: #bebab6;
-	--Gray2: #b8b8b8;
-	--Black: #000000;
-	--White: #ffffff;
-
-
 
 	--Primary: var(--White);
 	--Secondary: var(--Black);
@@ -134,7 +112,7 @@
 @keyframes flash 
 {
 	0% { background: black;}
-	100% {  background: linear-gradient(to bottom, var(--LightRed) 50%, var(--LightRed) 50%) top}
+	100% {  background: linear-gradient(to bottom, var(--FlashColor) 50%, var(--FlashColor) 50%) top}
 }
 
 .ElementWithUnderlineAnim 
@@ -198,11 +176,41 @@ body
 
 
 
-
+/*Fonts*/
 
 .tekoFont {
   font-family: "Teko", sans-serif;
   /*font-optical-sizing: auto;*/
   /*font-weight: 200;*/
   /*font-style: normal;*/
+}
+
+.tiro-tamil-regular {
+  font-family: "Tiro Tamil", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tiro-tamil-regular-italic {
+  font-family: "Tiro Tamil", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tiro-devanagari-sanskrit-regular {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tiro-devanagari-sanskrit-regular-italic {
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

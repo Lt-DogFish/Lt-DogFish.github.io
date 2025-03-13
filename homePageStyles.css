@@ -1,13 +1,16 @@
-
+@import url("colors.css");
 
 .namePanel
 {
 	width: 100%;
-
+	/*display: inline;*/
 	font-weight: bold;
-	font-size: 300px;
+	font-size: 250px;
 	line-height: 0.85;
 	align-self: start;
+	text-shadow: 80px 60px 0 var(--FlashColor);
+	padding-bottom: 60px;
+	margin-top: 30px;
 
 }
 
