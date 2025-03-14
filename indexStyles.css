@@ -37,6 +37,9 @@
 }
 
 
+
+
+
 /* MenuTab buttons/ Navigation buttons in top bar*/
 .MenuTab 
 {
@@ -87,7 +90,6 @@
 	transition: transform .3s cubic-bezier(.77,.12,.16,.95);*/
 	font-weight: Bold;
 }
-
 
 
 p
