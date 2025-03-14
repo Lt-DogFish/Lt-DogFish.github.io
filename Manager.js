@@ -22,8 +22,18 @@ async function fetchAndSetInnerHtml(path)
 }
 
 document.querySelectorAll(".button")
-	.forEach(button => {button.addEventListener("click", () => {
-		button.classList.add("clicked"); setTimeout(() => {button.classList.remove("clicked");}, 300);});});
+	.forEach(button => {button.addEventListener("click", () => 
+		{
+			button.classList.add("clicked");
+			button.classList.add("MenuTab-noHoverAfterClick");
+			button.classList.remove("MenuTab");
+			setTimeout(() => 
+				{
+					button.classList.remove("clicked");
+					button.classList.add("MenuTab");
+					button.classList.remove("MenuTab-noHoverAfterClick");
+				}, 300);
+		});});
 
 
 //Home.addEventListener("click", () => fetchAndSetInnerHtml("index.html"));
