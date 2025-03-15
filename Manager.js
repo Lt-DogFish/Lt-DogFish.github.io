@@ -40,3 +40,10 @@ document.querySelectorAll(".button")
 Home.addEventListener("click", () => fetchAndSetInnerHtml("homePage.html"));
 Profile.addEventListener("click", () => fetchAndSetInnerHtml("profilePage.html"));
 Projects.addEventListener("click", () => fetchAndSetInnerHtml("projectsPage.html"));
+
+window.addEventListener("scroll", scrollPercent);
+function scrollPercent()
+{
+	var scrollpercent = (Main.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+	
+}
