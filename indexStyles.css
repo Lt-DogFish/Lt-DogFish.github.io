@@ -36,10 +36,10 @@
 	/*color: var(--Primary);*/
 }
 
-
-
-
-
+p
+{
+	margin: 0px;
+}
 /* MenuTab buttons/ Navigation buttons in top bar*/
 .MenuTab 
 {
@@ -66,7 +66,7 @@
 	font-weight: Bold;
 }
 
-.MenuTab-noHoverAfterClick:hover
+.MenuTab-noHoverAfterClick
 {
 	float: left;
 	display: block;
@@ -91,14 +91,6 @@
 	font-weight: Bold;
 }
 
-
-p
-{
-	margin: 0px;
-}
-
-
-
 .MenuTab:hover
 {
 	background-position: bottom;
@@ -108,6 +100,31 @@ p
 
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
 	/*text-shadow: 0px 0px 5px #ffffff  /*, 15px 15px 1px #373737, 30px 30px 2px #707070;*/
+}
+
+.MenuTab-noHoverAfterClick:hover
+{
+	float: left;
+	display: block;
+	color: var(--Text1);
+	text-align: center;
+	padding: 10px 45px;
+	margin-bottom: 2px;
+	text-decoration: none;
+	/*font-weight: bolder;*/
+	font-size: 20px;
+	background-color: var(--Secondary2);
+
+	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
+	background-size: 100% 200%;
+
+	/*box-shadow: var(--Border1) -2px -2px 0px 2px inset ;*/
+
+	transition: .3s cubic-bezier(.77,.12,.16,.95);
+
+	/*margin: 0px;
+	transition: transform .3s cubic-bezier(.77,.12,.16,.95);*/
+	font-weight: Bold;
 }
 
 .MenuTab:hover p
