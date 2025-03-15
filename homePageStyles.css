@@ -16,12 +16,17 @@
 
 .top
 {
-	background-color: #ffffff;
-	color: #000000;
+	background-color: white;
+	color: black;
 }
 
-.namePanel.bottom
+.bottom
 {
-	background-color: #000000;
-	color: #ffffff;
+	background-color: black;
+	color: white;
+}
+
+.paralax
+{
+	--scroll: 0;
 }
