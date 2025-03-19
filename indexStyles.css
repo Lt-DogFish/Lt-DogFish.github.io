@@ -25,14 +25,17 @@
 
 .TopBar
 {
+	position: absolute;
+	top: 3%;
+	left: 3%;
 	overflow:hidden;
 	background-color: var(--Primary);
 	font-family: 'Helvetica Neue';
-	border-bottom: 1px var(--Secondary2) solid;
-	padding-top: 10px ;
-	padding-left: 50px;
+	/*border-bottom: 1px var(--Secondary2) solid;*/
+	/*padding-top: 10px ;
+	padding-left: 50px;*/
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
-	border: 1px;
+	
 	/*color: var(--Primary);*/
 }
 
