@@ -6,11 +6,15 @@
 	/*display: inline;*/
 	font-weight: bold;
 	font-size: 200px;
-	line-height: 0.85;
+	line-height: 1.4;
 	/*align-self: start;*/
-	text-shadow: 80px 60px 0 var(--FlashColor);
-	padding-bottom: 60px;
-	margin-top: 30px;
+	text-shadow: 10px 10px 1px var(--FlashColor);
+	/*padding-bottom: 60px;
+	margin-top: 30px;*/
+	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
+	text-align: center;
+
+	
 
 }
 
