@@ -5,9 +5,9 @@
 	width: 100%;
 	/*display: inline;*/
 	font-weight: bold;
-	font-size: 250px;
+	font-size: 200px;
 	line-height: 0.85;
-	align-self: start;
+	/*align-self: start;*/
 	text-shadow: 80px 60px 0 var(--FlashColor);
 	padding-bottom: 60px;
 	margin-top: 30px;
@@ -16,17 +16,21 @@
 
 .top
 {
-	background-color: white;
-	color: black;
+	background-color: var(--Gray0_5);
+	color: var(--Gray3);
 }
 
 .bottom
 {
-	background-color: black;
-	color: white;
+	background-color: var(--Gray3);
+	color: var(--Gray0_5);
 }
 
 .parallax
 {
 	--scroll: 0;
+}
+
+.topspace{
+	margin-top: 10%;
 }

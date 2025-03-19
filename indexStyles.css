@@ -11,16 +11,16 @@
 :root
 {
 
-	--Primary: var(--White);
-	--Secondary: var(--Black);
-	--Secondary2:  var(--White);
+	--Primary: var(--Gray0_5);
+	--Secondary: var(--Gray3);
+	--Secondary2:  var(--Gray0_5);
 
-	--Accent:	var(--Black);
+	--Accent:	var(--Gray3);
 
-	--Border1: var(--Black);
+	--Border1: var(--Gray3);
 
-	--Text1: var(--Black);
-	--TextInverted: var(--White);
+	--Text1: var(--Gray3);
+	--TextInverted: var(--Gray0_5);
 }
 
 .TopBar
