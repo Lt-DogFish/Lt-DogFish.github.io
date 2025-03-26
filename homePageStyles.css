@@ -36,6 +36,7 @@
 {
 	background-color: var(--Gray3);
 	color: var(--Gray0_5);
+
 	
 }
 
@@ -48,14 +49,26 @@
 	}
 	1%
 	{	
-		display: block;
+		display: inline;
 
 	}
 
 }
 
 .topspace{
-	margin-top: 10%;
+	position: absolute;
+	
+	animation: namePanelOriginIntoAnim 1s cubic-bezier(.77,.12,.16,.95);
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+
+@keyframes namePanelOriginIntoAnim{
+
+	0%{top:50%;}
+	100%{top:25%;}
+
+	
 }
 
 .loadWebsite{
@@ -74,15 +87,15 @@
 
 	70% {box-shadow: 0px 0px 5px 0px var(--Secondary); }
 
-    100% { width: 50%; height: 2%; top: 55%; left:25%; }
+    100% { width: 50%; height: 0%; top: 50%; left:25%; }
 }
 
 @keyframes loadAnim2
 {
-	0%{		right: 0%;
+	0%	{	
 			width: 0%;
-			height: 2%;
-			display: block;
+			height: 0%;
+			display: inline-block;
 			font-weight: bold;
 			font-size: 0px;
 			line-height: 0;
@@ -90,13 +103,15 @@
 			text-shadow: 0px 0px 0px var(--FlashColor);
 			/*padding-bottom: 60px;
 			margin-top: 30px;*/
-			box-shadow: var(--Border1) 0px 0px 0px 0px inset;}
+			box-shadow: var(--Border1) 0px 0px 0px 0px inset;
+		}
 
-	90%{  	right:0%;
+	50%	{ 
 			width: 100%;
-			display: block;
+			height: 0%;
+			display: inline-block;
 			font-weight: bold;
-			font-size: 200px;
+			font-size: 100px;
 			line-height: 1.4;
 			/*align-self: start;*/
 			text-shadow: 10px 10px 1px var(--FlashColor);
@@ -105,9 +120,10 @@
 			box-shadow: var(--Border1) 0px 0px 0px 2px inset;
 		}
 	100%{
-			right:0%;
+			
 			width: 100%;
-			display: block;
+			height: 100%;
+			display: inline-block;
 			font-weight: bold;
 			font-size: 200px;
 			line-height: 1.4;
