@@ -11,10 +11,9 @@
 
 .namePanel
 {
-
-	
 	overflow: hidden;
-
+	display: flex;
+	justify-content: center;
 	animation: NamePanelSlideOpenANIM calc(var(--NamePanelAnimDuration)* 1s) cubic-bezier(.77,.12,.16,.95);
 	animation-delay: calc(var(--BlurShrinkAnimDuration) * 1s);
 	animation-fill-mode: both;
@@ -40,7 +39,6 @@
 
 .bottom
 {
-	
 	top:50vh;
 	background-color: var(--Gray3);
 	color: var(--Gray0_5);
@@ -50,16 +48,14 @@
 .spanparent
 {
 	text-align: center;
-
 	white-space: nowrap;
     align-items: center;
-	
+	display: flex;
 }
 
 
 .topspan span
-{	
-	
+{
 	transform: translateY(200px);
 	display: inline-block;
 	animation: spanCharactersANIMtop calc(var(--NamePanelAnimDuration)* 1s) cubic-bezier(.77,.12,.16,.95) forwards;
@@ -67,7 +63,7 @@
 }
 
 .bottomspan span
-{	
+{
 	transform: translateY(-200px);
 	display: inline-block;
 	animation: spanCharactersANIMbottom calc(var(--NamePanelAnimDuration)* 1s) cubic-bezier(.77,.12,.16,.95) forwards;
@@ -77,14 +73,14 @@
 @keyframes spanCharactersANIMtop {
     from {
 		transform: translateY(200px);
-		letter-spacing: 100px;
+		letter-spacing: 20px;
         opacity: 0;
 		text-shadow: 0px 0px 0px var(--FlashColor);
 		font-weight: 100;
     }
     to {
-		transform: translateY(-20px);
-		letter-spacing: -50px;
+		transform: translateY(0px);
+		letter-spacing: 0px;
         opacity: 1;
 		text-shadow: 10px 10px 1px var(--FlashColor);
 		font-weight: 900;
@@ -94,14 +90,14 @@
 @keyframes spanCharactersANIMbottom {
     from {
 		transform: translateY(-200px);
-		letter-spacing: 100px;
+		letter-spacing: 20px;
         opacity: 0;
 		text-shadow: 0px 0px 0px var(--FlashColor);
 		font-weight: 100;
     }
     to {
-		transform: translateY(-20px);
-		letter-spacing: -50px;
+		transform: translateY(0px);
+		letter-spacing: 0px;
         opacity: 1;
 		text-shadow: 10px 10px 1px var(--FlashColor);
 		font-weight: 900;
@@ -125,7 +121,6 @@
 	position: absolute;
 	animation: FullScreenBlurShrinkANIM calc(var(--BlurShrinkAnimDuration)*1s) cubic-bezier(.77,.12,.16,.95);
 }
-
 
 
 @keyframes FullScreenBlurShrinkANIM 
@@ -163,49 +158,37 @@
 		}
 
 	80%{
-			width: 70vw; 
+			width: 55vw; 
 			height: 0.5vh; 
 			top: 50vh; 
-			left:15vw; 
+			left:22.5vw; 
 		}
 
 	100%{
-			width: 70vw; 
+			width: 55vw; 
 			height: 0.1vh; 
 			top: 50vh; 
-			left:15vw; 
+			left:22.5vw; 
 		}
 }
 
 @keyframes NamePanelSlideOpenANIM
 {  
 	0%	{
-			width: 70vw;
+			width: 55vw;
 			height: 0vh;
-			/*display: inline-block;*/
-			font-weight: 900;
+			font-weight: 100;
 			font-size: 100px;
 			line-height: 0;
-			/*align-self: start;*/
-			
-			/*padding-bottom: 60px;
-			margin-top: 30px;*/
 			box-shadow: var(--Border1) 0px 0px 0px 2px inset;
 		}
 
-	
-
 	100%{
-			width: 70vw;
+			width: 55vw;
 			height: 35vh;
-			/*display: inline-block;*/
-			font-weight: 900;
+			font-weight: 1200;
 			font-size: 200px;
 			line-height: 1.4;
-			/*align-self: start;*/
-			
-			/*padding-bottom: 60px;
-			margin-top: 30px;*/
 			box-shadow: var(--Border1) 0px 0px 0px 2px inset;
 		}
 }
