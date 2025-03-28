@@ -1,7 +1,6 @@
 @import url("colors.css");
 
-:root
-{
+:root {
 	--BlurShrinkAnimDuration: 2;
 	--NamePanelAnimDuration: 0.8;
 	--SpanCharactersAnimDuration: 1;
@@ -9,8 +8,7 @@
 	--CalulatedInitialDelay: calc((var(--BlurShrinkAnimDuration) + var(--NamePanelAnimDuration)) - 2)
 }
 
-.namePanel
-{
+.namePanel {
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -19,8 +17,7 @@
 	animation-fill-mode: both;
 }
 
-.namepanelscontainer
-{
+.namepanelscontainer {
 	width: 100vw;
     height: 100vh;
     display: -webkit-flex; 
@@ -30,23 +27,20 @@
 	overflow: hidden;
 }
 
-.top
-{
+.top {
 	top: 25vh;
 	background-color: var(--Gray0_5);
 	color: var(--Gray3);
 }
 
-.bottom
-{
+.bottom {
 	top:50vh;
 	background-color: var(--Gray3);
 	color: var(--Gray0_5);
 }
 
 
-.spanparent
-{
+.spanparent {
 	text-align: center;
 	white-space: nowrap;
     align-items: center;
@@ -54,16 +48,14 @@
 }
 
 
-.topspan span
-{
+.topspan span {
 	transform: translateY(200px);
 	display: inline-block;
 	animation: spanCharactersANIMtop calc(var(--NamePanelAnimDuration)* 1s) cubic-bezier(.77,.12,.16,.95) forwards;
 	animation-delay: calc(var(--BlurShrinkAnimDuration) * 1s);
 }
 
-.bottomspan span
-{
+.bottomspan span {
 	transform: translateY(-200px);
 	display: inline-block;
 	animation: spanCharactersANIMbottom calc(var(--NamePanelAnimDuration)* 1s) cubic-bezier(.77,.12,.16,.95) forwards;
@@ -115,16 +107,14 @@
 .spanparent span:nth-child(9) { animation-duration: calc((var(--CalulatedInitialDelay) + ((var(--SpanCharactersAnimDuration) * 0.9)))  * 1s); }
 .spanparent span:nth-child(10) { animation-duration: calc((var(--CalulatedInitialDelay) + ((var(--SpanCharactersAnimDuration) * 1)))   * 1s); }
 
-.fullscreenblur
-{
+.fullscreenblur {
 	background-color: var(--Secondary);
 	position: absolute;
 	animation: FullScreenBlurShrinkANIM calc(var(--BlurShrinkAnimDuration)*1s) cubic-bezier(.77,.12,.16,.95);
 }
 
 
-@keyframes FullScreenBlurShrinkANIM 
-{
+@keyframes FullScreenBlurShrinkANIM {
     0% 	{
 			width: 100vw; 
 			height: 100vh; 
@@ -172,8 +162,7 @@
 		}
 }
 
-@keyframes NamePanelSlideOpenANIM
-{  
+@keyframes NamePanelSlideOpenANIM {
 	0%	{
 			width: 55vw;
 			height: 0vh;

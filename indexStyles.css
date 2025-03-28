@@ -1,53 +1,35 @@
 @import url("colors.css");
 
-
-
-*
-{
+* {
 	box-sizing: content-box;
 	font-family: 'Optima';
 }
 
-:root
-{
-
+:root {
 	--Primary: var(--Gray0_5);
 	--Secondary: var(--Gray3);
 	--Secondary2:  var(--Gray0_5);
-
 	--Accent:	var(--Gray3);
-
 	--Border1: var(--Gray3);
-
 	--Text1: var(--Gray3);
 	--TextInverted: var(--Gray0_5);
 }
 
-
-
-.TopBar
-{
+.TopBar {
 	position: absolute;
 	top: 3%;
 	left: 3%;
 	overflow:hidden;
 	background-color: var(--Primary);
 	font-family: 'Helvetica Neue';
-	/*border-bottom: 1px var(--Secondary2) solid;*/
-	/*padding-top: 10px ;
-	padding-left: 50px;*/
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
-	
-	/*color: var(--Primary);*/
 }
 
-p
-{
+p {
 	margin: 0px;
 }
-/* MenuTab buttons/ Navigation buttons in top bar*/
-.MenuTab 
-{
+
+.MenuTab {
 	float: left;
 	display: block;
 	color: var(--Text1);
@@ -55,24 +37,15 @@ p
 	padding: 10px 45px;
 	margin-bottom: 2px;
 	text-decoration: none;
-	/*font-weight: bolder;*/
 	font-size: 20px;
 	background-color: var(--Secondary2);
-
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
-
-	/*box-shadow: var(--Border1) -2px -2px 0px 2px inset ;*/
-
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
-
-	/*margin: 0px;
-	transition: transform .3s cubic-bezier(.77,.12,.16,.95);*/
 	font-weight: Bold;
 }
 
-.MenuTab-noHoverAfterClick
-{
+.MenuTab-noHoverAfterClick {
 	float: left;
 	display: block;
 	color: var(--Text1);
@@ -80,35 +53,22 @@ p
 	padding: 10px 45px;
 	margin-bottom: 2px;
 	text-decoration: none;
-	/*font-weight: bolder;*/
 	font-size: 20px;
 	background-color: var(--Secondary2);
-
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
-
-	/*box-shadow: var(--Border1) -2px -2px 0px 2px inset ;*/
-
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
-
-	/*margin: 0px;
-	transition: transform .3s cubic-bezier(.77,.12,.16,.95);*/
 	font-weight: Bold;
 }
 
-.MenuTab:hover
-{
+.MenuTab:hover {
 	background-position: bottom;
 	color: var(--Text1);
-	/*padding: 10px 46px;*/
 	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
-
-	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; /*, #f9f9f9 0px 0px 4px 6px inset;*/
-	/*text-shadow: 0px 0px 5px #ffffff  /*, 15px 15px 1px #373737, 30px 30px 2px #707070;*/
+	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; 
 }
 
-.MenuTab-noHoverAfterClick:hover
-{
+.MenuTab-noHoverAfterClick:hover {
 	float: left;
 	display: block;
 	color: var(--Text1);
@@ -116,55 +76,55 @@ p
 	padding: 10px 45px;
 	margin-bottom: 2px;
 	text-decoration: none;
-	/*font-weight: bolder;*/
 	font-size: 20px;
 	background-color: var(--Secondary2);
-
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
-
-	/*box-shadow: var(--Border1) -2px -2px 0px 2px inset ;*/
-
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
-
-	/*margin: 0px;
-	transition: transform .3s cubic-bezier(.77,.12,.16,.95);*/
 	font-weight: Bold;
 }
 
-.MenuTab:hover p
-{
+.MenuTab:hover p {
 	color: var(--TextInverted);
 	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 }
 
-.button.clicked
-{
+.button.clicked {
 	animation: flash 0.1s ;
 	/*pointer-events: none;*/
 }
-@keyframes pop 
-{
-    0% {	padding: 10px 46px; }
-    20% { padding: 8px 56px; transform: translate(-6px, 2px);}
-    100% { padding: 10px 46px; }
+
+@keyframes pop {
+	0%	{
+			padding: 10px 46px; 
+		}
+
+    20% { 
+			padding: 8px 56px; 
+			transform: translate(-6px, 2px);
+		}
+
+    100%{
+			padding: 10px 46px;
+		}
 }
 
-@keyframes flash 
-{
-	0% { background: black;}
-	100% {  background: linear-gradient(to bottom, var(--FlashColor) 50%, var(--FlashColor) 50%) top}
+@keyframes flash {
+	0%	{
+			background: black;
+		}
+
+	100%{
+			background: linear-gradient(to bottom, var(--FlashColor) 50%, var(--FlashColor) 50%) top
+		}
 }
 
-.ElementWithUnderlineAnim 
-{
+.ElementWithUnderlineAnim {
 	display: inline-block;
 	position: relative;
 }
 
-.ElementWithUnderlineAnim::after 
-{
-
+.ElementWithUnderlineAnim::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -173,33 +133,25 @@ p
   bottom: 0;
   left: 0;
   background-color: var(--Border1);
-  /*box-shadow: #ffffff 0px -3px 20px 2px ;*/
+
   /* set start and end position of udnerline*/
   transform-origin: top;
   transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
-
 }
 
-.ElementWithUnderlineAnim:hover::after 
-{
+.ElementWithUnderlineAnim:hover::after {
 	transform: scaleX(1);
-
 	/* set start and end position of udnerline*/
 	transform-origin: bottom;
 }
 
-
-
-
-body
-{
+body {
 	background-color: var(--Secondary2);
 	padding: 0px;
 	margin: 0px;
 }
 
-#main
-{
+#main {
 	display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -207,9 +159,22 @@ body
     align-items: center;
 }
 
-#main.content
-{
+#main.content {
 	flex: 1;
+}
+
+/******************** Footer CSS ***********************/
+
+.footer {
+	background-color: var(--Secondary); 
+	height: 25vh; color: var(--FlashColor); 
+
+	font-size: 75px;
+	display: -webkit-flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
 }
 
 
@@ -217,13 +182,12 @@ body
 
 
 
-/*Fonts*/
+
+
+/********************** Fonts *************************/
 
 .tekoFont {
   font-family: "Teko", sans-serif;
-  /*font-optical-sizing: auto;*/
-  /*font-weight: 200;*/
-  /*font-style: normal;*/
 }
 
 .tiro-tamil-regular {
