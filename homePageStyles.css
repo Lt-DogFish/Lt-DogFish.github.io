@@ -23,10 +23,22 @@
 
 }
 
+.container
+{
+	width: 1920px;
+    height: 1080px;
+    display: flex; /* Optional: Helps with centering */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 
 .top
 {
+	top: 25%;
 	background-color: var(--Gray0_5);
 	color: var(--Gray3);
 	
@@ -34,6 +46,7 @@
 
 .bottom
 {
+	top:50%;
 	background-color: var(--Gray3);
 	color: var(--Gray0_5);
 }
@@ -53,14 +66,6 @@
 
 }
 
-.topspace{
-	position: absolute;
-	
-	animation: namePanelOriginIntoAnim 1s cubic-bezier(.77,.12,.16,.95);
-	animation-fill-mode: forwards;
-	animation-delay: 2s;
-}
-
 @keyframes namePanelOriginIntoAnim{
 
 	0%{top:50%;}
@@ -72,9 +77,7 @@
 .loadWebsite{
 	background-color: var(--Secondary);
 	position: absolute;
-	top: 0;
-	left: 0;
-	animation: loadAnim 2s cubic-bezier(.77,.12,.16,.95);
+	animation: loadAnim 2.3s cubic-bezier(.77,.12,.16,.95);
 }
 
 @keyframes loadAnim 
@@ -94,40 +97,36 @@
 			box-shadow: 0px 0px 5px 0px var(--Secondary); 
 		}
 
-    50%	{ 
+    59%	{ 
 			width: 50%; 
 			height: 2%; 
-			top: 50%; 
+			top: 55%; 
 			left:25%; 
 		}
 	
-	70%	{
+	76%	{
 			width: 60%; 
 			height: 0.5%; 
-			top: 50%; 
+			top: 63%; 
 			left:20%; 
 		}
 
-	80%	{
-			width: 60%; 
-			height: 0.5%; 
-			top: 50%; 
-			left:20%; 
-		}
+	
 
-	100%{
-			width: 50%; 
-			height: 40%; 
-			top: 30%; 
-			left:25%; 
+	90%{
+			width: 60%; 
+			height: 0%; 
+			top: 66%; 
+			left:20%; 
 		}
 }
 
 @keyframes loadAnim2
 {
 	0%	{	
+			
 			width: 0%;
-			height: 0%;
+			height: 1%;
 			/*display: inline-block;*/
 			font-weight: bold;
 			font-size: 0px;
@@ -140,12 +139,13 @@
 		}
 
 	50%	{ 
-			width: 100%;
-			height: 0%;
+			
+			width: 50%;
+			height: 0.5%;
 			/*display: inline-block;*/
 			font-weight: bold;
-			font-size: 100px;
-			line-height: 1.4;
+			font-size: 0px;
+			line-height: 0;
 			/*align-self: start;*/
 			text-shadow: 10px 10px 1px var(--FlashColor);
 			/*padding-bottom: 60px;
@@ -153,9 +153,9 @@
 			box-shadow: var(--Border1) 0px 0px 0px 2px inset;
 		}
 	100%{
-			
-			width: 100%;
-			height: 100%;
+		
+			width: 50%;
+			height: 27%;
 			/*display: inline-block;*/
 			font-weight: bold;
 			font-size: 200px;
