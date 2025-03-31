@@ -1,12 +1,13 @@
 const Main = document.getElementById("main");
 const Home = document.getElementById("home");
-fetchAndSetInnerHtml("homePage.html");
+
 const Profile = document.getElementById("profile");
 const Projects = document.getElementById("projects");
 
-//const button = document.getElementsByClassName("button");
+fetchAndSetInnerHtml("homePage.html");
 
 
+//Set 
 async function fetchAndSetInnerHtml(path)
 {
 	try
@@ -42,8 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("show");
-                        observer.unobserve(entry.target); // Stops observing after it fades in
+                       // observer.unobserve(entry.target); // Stops observing after it fades in
                     }
+					else{
+						entry.target.classList.remove("show");
+					}
                 });
             }, { threshold: 0.2 });
 

@@ -181,7 +181,7 @@ body {
 /******************** Fade animation ***********************/
 .fade-in {
     opacity: 0;
-    transform: translateY(5vh);
+    transform: translateY(1vh);
     transition: opacity 1s cubic-bezier(.77,.12,.16,.95), transform 1s cubic-bezier(.77,.12,.16,.95);
 }
 
