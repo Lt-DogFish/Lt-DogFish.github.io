@@ -57,6 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
+/* Work in progress scroll delta */
+const container = document.querySelector('.scrollable-container');
+let previousScrollTop = 0;
+
+container.addEventListener('scroll', () => {
+  const currentScrollTop = container.scrollTop;
+  const deltaY = currentScrollTop - previousScrollTop;
+
+  if (deltaY > 0) {
+    console.log('Scrolled down');
+  } else {
+    console.log('Scrolled up');
+  }
+
+  previousScrollTop = currentScrollTop;
+});
+
 
 Home.addEventListener("click", () => fetchAndSetInnerHtml("HTML/homePage.html"));
 Profile.addEventListener("click", () => fetchAndSetInnerHtml("HTML/profilePage.html"));
