@@ -17,6 +17,16 @@
 	--MenuTabFontSize : 1.3em;
 }
 
+
+
+
+
+
+
+
+
+
+/* Nav Bar*/
 .TopBar {
 	position: absolute;
 	top: 3%;
@@ -26,6 +36,14 @@
 	font-family: 'Helvetica Neue';
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
 }
+
+
+
+
+
+
+
+
 
 
 .MenuTab {
@@ -43,7 +61,6 @@
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
 	font-weight: Bold;
 }
-
 .MenuTab-noHoverAfterClick {
 	float: left;
 	display: block;
@@ -62,11 +79,10 @@
 
 .MenuTab:hover {
 	background-position: bottom;
-	color: var(--Text1);
+	color: var(--TextInverted);
 	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; 
 }
-
 .MenuTab-noHoverAfterClick:hover {
 	float: left;
 	display: block;
@@ -83,31 +99,10 @@
 	font-weight: Bold;
 }
 
-.MenuTab:hover{
-	color: var(--TextInverted);
-	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
-}
-
 .button.clicked {
 	animation: flash 0.1s ;
 	/*pointer-events: none;*/
 }
-
-@keyframes pop {
-	0%	{
-			padding: 10px 46px; 
-		}
-
-    20% { 
-			padding: 8px 56px; 
-			transform: translate(-6px, 2px);
-		}
-
-    100%{
-			padding: 10px 46px;
-		}
-}
-
 @keyframes flash {
 	0%	{
 			background: black;
@@ -122,7 +117,6 @@
 	display: inline-block;
 	position: relative;
 }
-
 .ElementWithUnderlineAnim::after {
   content: '';
   position: absolute;
@@ -132,23 +126,37 @@
   bottom: 0;
   left: 0;
   background-color: var(--Border1);
-
-  /* set start and end position of udnerline*/
   transform-origin: top;
   transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
 }
-
 .ElementWithUnderlineAnim:hover::after {
 	transform: scaleX(1);
-	/* set start and end position of udnerline*/
 	transform-origin: bottom;
 }
+
+
+
+
+
+
+
+
+
 
 body {
 	background-color: var(--Secondary2);
 	padding: 0px;
 	margin: 0px;
 }
+
+
+
+
+
+
+
+
+
 
 #main {
 	display: flex;
@@ -157,17 +165,33 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 #main.content {
 	flex: 1;
 }
 
-/******************** Footer CSS ***********************/
+.fade-in {
+    opacity: 0;
+    transform: translateY(1vh);
+    transition: opacity 0.3s cubic-bezier(.77,.12,.16,.95), transform 0.7s cubic-bezier(.77,.12,.16,.95);
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0vh);
+}
 
+
+
+
+
+
+
+
+
+
+/******************** Footer CSS ***********************/
 .footer {
 	background-color: var(--Secondary); 
 	height: 25vh; color: var(--FlashColor); 
-
 	font-size: 75px;
 	display: -webkit-flex; 
     flex-direction: column;
@@ -177,52 +201,40 @@ body {
 }
 
 
-/******************** Fade animation ***********************/
-.fade-in {
-    opacity: 0;
-    transform: translateY(1vh);
-    transition: opacity 1s cubic-bezier(.77,.12,.16,.95), transform 1s cubic-bezier(.77,.12,.16,.95);
-}
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0vh);
-}
+
+
+
+
 
 
 
 /********************** Fonts *************************/
-
 .tekoFont {
-  font-family: "Teko", sans-serif;
+	font-family: "Teko", sans-serif;
 }
-
 .tiro-tamil-regular {
-  font-family: "Tiro Tamil", serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Tiro Tamil", serif;
+	font-weight: 400;
+	font-style: normal;
 }
-
 .tiro-tamil-regular-italic {
-  font-family: "Tiro Tamil", serif;
-  font-weight: 400;
-  font-style: italic;
+	font-family: "Tiro Tamil", serif;
+	font-weight: 400;
+	font-style: italic;
 }
-
 .tiro-devanagari-sanskrit-regular {
-  font-family: "Tiro Devanagari Sanskrit", serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Tiro Devanagari Sanskrit", serif;
+	font-weight: 400;
+	font-style: normal;
 }
-
 .tiro-devanagari-sanskrit-regular-italic {
-  font-family: "Tiro Devanagari Sanskrit", serif;
-  font-weight: 400;
-  font-style: italic;
+	font-family: "Tiro Devanagari Sanskrit", serif;
+	font-weight: 400;
+	font-style: italic;
 }
-
 .monoton-regular {
-  font-family: "Monoton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Monoton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }

@@ -1,13 +1,12 @@
 const Main = document.getElementById("main");
 const Home = document.getElementById("home");
-
 const Profile = document.getElementById("profile");
 const Projects = document.getElementById("projects");
 
 fetchAndSetInnerHtml("HTML/homePage.html");
 
 
-//Set 
+//Set inner HTML of index.html's <main>
 async function fetchAndSetInnerHtml(path)
 {
 	try
@@ -22,6 +21,7 @@ async function fetchAndSetInnerHtml(path)
 	}
 }
 
+//Menutab button Click animation logic
 document.querySelectorAll(".button")
 	.forEach(button => {button.addEventListener("click", () => 
 		{
@@ -36,6 +36,7 @@ document.querySelectorAll(".button")
 				}, 300);
 		});});
 
+//Content fade in on vieport enter, function
 document.addEventListener("DOMContentLoaded", function () {
             const elements = document.querySelectorAll(".fade-in");
 
@@ -57,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-//Home.addEventListener("click", () => fetchAndSetInnerHtml("index.html"));
 Home.addEventListener("click", () => fetchAndSetInnerHtml("HTML/homePage.html"));
 Profile.addEventListener("click", () => fetchAndSetInnerHtml("HTML/profilePage.html"));
 Projects.addEventListener("click", () => fetchAndSetInnerHtml("HTML/projectsPage.html"));
