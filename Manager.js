@@ -4,7 +4,7 @@ const Home = document.getElementById("home");
 const Profile = document.getElementById("profile");
 const Projects = document.getElementById("projects");
 
-fetchAndSetInnerHtml("homePage.html");
+fetchAndSetInnerHtml("HTML/homePage.html");
 
 
 //Set 
@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //Home.addEventListener("click", () => fetchAndSetInnerHtml("index.html"));
-Home.addEventListener("click", () => fetchAndSetInnerHtml("homePage.html"));
-Profile.addEventListener("click", () => fetchAndSetInnerHtml("profilePage.html"));
-Projects.addEventListener("click", () => fetchAndSetInnerHtml("projectsPage.html"));
+Home.addEventListener("click", () => fetchAndSetInnerHtml("HTML/homePage.html"));
+Profile.addEventListener("click", () => fetchAndSetInnerHtml("HTML/profilePage.html"));
+Projects.addEventListener("click", () => fetchAndSetInnerHtml("HTML/projectsPage.html"));
 
 window.addEventListener("scroll", scrollPercent);
 function scrollPercent()
