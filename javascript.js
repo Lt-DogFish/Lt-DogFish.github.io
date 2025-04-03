@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-/* Work in progress scroll delta */
+/* Work in progress scroll delta DOESNT WORK, HANGS UP MENU TABS*/
 const container = document.querySelector('.scrollable-container');
 let previousScrollTop = 0;
 
