@@ -4,6 +4,7 @@ const Profile = document.getElementById("profile");
 const Projects = document.getElementById("projects");
 
 fetchAndSetInnerHtml("HTML/homePage.html");
+//trackFadeInElements();
 
 
 //Set inner HTML of index.html's <main>
@@ -14,11 +15,14 @@ async function fetchAndSetInnerHtml(path)
 		await fetch(path)
 				.then(response => response.text())
 				.then(fetchedHtml => Main.innerHTML = fetchedHtml);
+		
 	}
 	catch(err)
 	{
 		console.log(err);
 	}
+
+	trackFadeInElementsNew();
 }
 
 //Menutab button Click animation logic
@@ -29,15 +33,19 @@ document.querySelectorAll(".button")
 			button.classList.add("MenuTab-noHoverAfterClick");
 			button.classList.remove("MenuTab");
 			setTimeout(() => 
-				{
-					button.classList.remove("clicked");
-					button.classList.add("MenuTab");
-					button.classList.remove("MenuTab-noHoverAfterClick");
-				}, 300);
-		});});
+			{
+				button.classList.remove("clicked");
+				button.classList.add("MenuTab");
+				button.classList.remove("MenuTab-noHoverAfterClick");
+			}, 300);
+		});
+	});
 
 //Content fade in on vieport enter, function
-document.addEventListener("DOMContentLoaded", function () {
+/*
+function trackFadeInElements()
+{
+	document.addEventListener("DOMContentLoaded", function () {
             const elements = document.querySelectorAll(".fade-in");
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -55,9 +63,31 @@ document.addEventListener("DOMContentLoaded", function () {
             elements.forEach(element => {
                 observer.observe(element);
             });
-        });
+    });
+}
+*/
 
-/* Work in progress scroll delta DOESNT WORK, HANGS UP MENU TABS*/
+function trackFadeInElementsNew()
+{
+	const elements = document.querySelectorAll(".fade-in");
+
+	const observer = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("show");
+				// observer.unobserve(entry.target); // optional one-time fade
+			}
+			else {
+				entry.target.classList.remove("show");
+			}
+		});
+	}, { threshold: 0.2 });
+
+	elements.forEach(element => {
+		observer.observe(element);
+	});
+}
+/* Work in progress scroll delta DOESNT WORK, HANGS UP MENU TABS
 const container = document.querySelector('.scrollable-container');
 let previousScrollTop = 0;
 
@@ -73,11 +103,11 @@ container.addEventListener('scroll', () => {
 
   previousScrollTop = currentScrollTop;
 });
+*/
 
-
-Home.addEventListener("click", () => fetchAndSetInnerHtml("HTML/homePage.html"));
-Profile.addEventListener("click", () => fetchAndSetInnerHtml("HTML/profilePage.html"));
-Projects.addEventListener("click", () => fetchAndSetInnerHtml("HTML/projectsPage.html"));
+Home.addEventListener(		"click", function() {fetchAndSetInnerHtml("HTML/homePage.html"); 		trackFadeInElements();});
+Profile.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/profilePage.html");	 	trackFadeInElements();});
+Projects.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/projectsPage.html"); 	trackFadeInElements();});
 
 window.addEventListener("scroll", scrollPercent);
 function scrollPercent()

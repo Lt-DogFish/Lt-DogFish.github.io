@@ -179,3 +179,30 @@
 			box-shadow: var(--Border1) 0px 0px 0px 2px inset;
 		}
 }
+
+.about-container
+{
+	width: 55vw;
+    height: 50vh;
+	margin-bottom: 15vh;
+    display: -webkit-flex; 
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+	overflow: hidden;
+
+	background-color: var(--Gray0_5);
+	color: var(--Gray3);
+}
+
+.about-container h1
+{
+	font-size: 3em;
+
+}
+
+.about-container p1
+{
+	font-size: 2em;
+	line-height: 1;
+}
