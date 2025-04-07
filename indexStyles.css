@@ -180,7 +180,10 @@ body {
 }
 
 
-
+.scroll
+{
+	color: pink;
+}
 
 
 
@@ -194,11 +197,13 @@ body {
 	background-color: var(--Secondary); 
 	height: 25vh; color: var(--FlashColor); 
 	font-size: 75px;
-	display: -webkit-flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-	overflow: hidden;
+	padding-left: 1vw;
+	line-height: 0.5;
+	display: inline-flexbox; 
+    /*flex-direction: column;*/
+    justify-content: left;
+    align-items: start;
+	
 }
 
 

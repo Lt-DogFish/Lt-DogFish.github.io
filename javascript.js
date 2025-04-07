@@ -3,6 +3,8 @@ const Home = document.getElementById("home");
 const Profile = document.getElementById("profile");
 const Projects = document.getElementById("projects");
 
+const Scroll = document.getElementById("scroll");
+
 fetchAndSetInnerHtml("HTML/homePage.html");
 //trackFadeInElements();
 
@@ -81,7 +83,7 @@ function trackFadeInElementsNew()
 				entry.target.classList.remove("show");
 			}
 		});
-	}, { threshold: 0.2 });
+	}, { threshold: 0.9 });
 
 	elements.forEach(element => {
 		observer.observe(element);
@@ -109,9 +111,20 @@ Home.addEventListener(		"click", function() {fetchAndSetInnerHtml("HTML/homePage
 Profile.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/profilePage.html");	 	trackFadeInElements();});
 Projects.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/projectsPage.html"); 	trackFadeInElements();});
 
-window.addEventListener("scroll", scrollPercent);
-function scrollPercent()
-{
-	var scrollpercent = (Main.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-	
+
+
+
+
+
+window.onload = function () {
+  window.onscroll = scrollPercent;
+};
+
+function scrollPercent() {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = scrollTop / scrollHeight;
+
+  const scrollAmount = (scrollPercent * 100).toFixed(2); // Optional: show as a percentage
+  document.getElementById('scroll').innerHTML = scrollAmount.toString() + '%';
 }
