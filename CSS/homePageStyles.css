@@ -183,7 +183,6 @@
 .about-container
 {
 	width: 55vw;
-    height: 50vh;
 	margin-bottom: 15vh;
     display: -webkit-flex; 
     flex-direction: column;
@@ -197,12 +196,13 @@
 
 .about-container h1
 {
-	font-size: 3em;
+	text-shadow: 5px 5px 1px var(--FlashColor);
+	font-size: 3rem;
 
 }
 
 .about-container p1
 {
-	font-size: 2em;
+	font-size: 2rem;
 	line-height: 1;
 }
