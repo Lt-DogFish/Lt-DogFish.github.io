@@ -115,16 +115,63 @@ Projects.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/proje
 
 
 
-
+/*
 window.onload = function () {
   window.onscroll = scrollPercent;
 };
 
-function scrollPercent() {
-  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPercent = scrollTop / scrollHeight;
 
-  const scrollAmount = (scrollPercent * 100).toFixed(2); // Optional: show as a percentage
-  document.getElementById('scroll').innerHTML = scrollAmount.toString() + '%';
+function scrollPercent() {
+  	const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  	const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ 	const scrollPercent = scrollTop / scrollHeight;
+
+
+  	const scrollAmount = (scrollPercent * 100).toFixed(2); // Optional: show as a percentage
+
+	const drawer = document.getElementsByClassName("drawer");
+	const currentTop = drawer[0].getBoundingClientRect().top + window.scrollY;
+	drawer[0].style.top = (currentTop + (getScrollDelta() * 5)) + "vh";
+
+
+  	document.getElementById('scroll').innerHTML = scrollAmount.toString() + '%';
 }
+
+
+const previousScrollPosition = 0;
+const currentScrollPosition = 0;
+function getScrollDelta()
+{
+	currentScrollPosition = window.scrollY;
+	return currentScrollPosition - previousScrollPosition;
+	previousScrollPosition = currentScrollPosition;
+}*/
+
+let previousScrollY = window.scrollY;
+let drawerTopVH = 100; // start off-screen at 100vh
+
+function getScrollDelta() {
+	const delta = window.scrollY - previousScrollY;
+	previousScrollY = window.scrollY;
+	return delta;
+}
+
+function moveDrawer() {
+	const drawer = document.querySelector(".drawer");
+	const vh = window.innerHeight;
+	const delta = getScrollDelta();
+
+	// Convert scroll delta from px to vh
+	const deltaVH = (delta * -50) / vh;
+
+	// Update drawer position
+	drawerTopVH += deltaVH;
+
+	// Clamp it if needed (e.g., between 0 and 100)
+	/*drawerTopVH = Math.max(0, Math.min(100, drawerTopVH));*/
+
+	// Apply new position
+	drawer.style.top = drawerTopVH + "vh";
+}
+
+window.addEventListener("scroll", moveDrawer);
