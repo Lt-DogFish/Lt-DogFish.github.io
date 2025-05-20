@@ -27,14 +27,28 @@
 
 
 /* Nav Bar*/
-.TopBar {
-	position: absolute;
-	top: 3%;
-	left: 3%;
-	overflow:hidden;
-	background-color: var(--Primary);
-	font-family: 'Helvetica Neue';
+
+.Shelf	{
+	z-index: 100;
+	position: fixed;
+	width: 100vw;
+	height: 10vh;
+	background-color: hsl(0 0% 100% / 0);
+	backdrop-filter: blur(10px);
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ;
+}
+
+
+
+.TopBar {
+	z-index: 101;
+	position: absolute;
+	bottom: 0%;
+	left: 2.5%;
+	overflow:hidden;
+
+	font-family: 'Helvetica Neue';
+	
 }
 
 
@@ -55,7 +69,8 @@
 	margin-bottom: 2px;
 	text-decoration: none;
 	font-size: var(--MenuTabFontSize);
-	background-color: var(--Secondary2);
+	/*background-color: var(--Secondary2);*/
+	backdrop-filter: blur(10px);
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
@@ -70,7 +85,7 @@
 	margin-bottom: 2px;
 	text-decoration: none;
 	font-size: var(--MenuTabFontSize);
-	background-color: var(--Secondary2);
+	/*background-color: var(--Secondary2);*/
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
@@ -92,7 +107,7 @@
 	margin-bottom: 2px;
 	text-decoration: none;
 	font-size: var(--MenuTabFontSize);
-	background-color: var(--Secondary2);
+	/*background-color: var(--Secondary2);*/
 	background: linear-gradient(to bottom, var(--Primary) 50%, var(--Secondary) 50%) top;
 	background-size: 100% 200%;
 	transition: .3s cubic-bezier(.77,.12,.16,.95);
