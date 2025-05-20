@@ -107,9 +107,9 @@ container.addEventListener('scroll', () => {
 });
 */
 
-Home.addEventListener(		"click", function() {fetchAndSetInnerHtml("HTML/homePage.html"); 		trackFadeInElements();});
-Profile.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/profilePage.html");	 	trackFadeInElements();});
-Projects.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/projectsPage.html"); 	trackFadeInElements();});
+Home.addEventListener(		"click", function() {fetchAndSetInnerHtml("HTML/homePage.html"); 		trackFadeInElementsNew();});
+Profile.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/profilePage.html");	 	trackFadeInElementsNew();});
+Projects.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/projectsPage.html"); 	trackFadeInElementsNew();});
 
 
 
