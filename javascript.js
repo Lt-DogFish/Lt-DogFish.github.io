@@ -108,7 +108,7 @@ container.addEventListener('scroll', () => {
 */
 
 Home.addEventListener(		"click", function() {fetchAndSetInnerHtml("HTML/homePage.html"); 		trackFadeInElementsNew();});
-Profile.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/profilePage.html");	 	trackFadeInElementsNew();});
+/*Profile.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/profilePage.html");	 	trackFadeInElementsNew();});*/
 Projects.addEventListener(	"click", function() {fetchAndSetInnerHtml("HTML/projectsPage.html"); 	trackFadeInElementsNew();});
 
 
@@ -175,3 +175,13 @@ function moveDrawer() {
 }
 
 window.addEventListener("scroll", moveDrawer);
+
+const elements = document.querySelectorAll(".slow-scroll");
+
+window.addEventListener("scroll", () => {
+  elements.forEach(el => {
+    const speed = parseFloat(el.dataset.speed) || 0; // fallback to 0 if not set
+    const offset = window.scrollY * speed;
+    el.style.transform = `translateY(${offset}px)`;
+  });
+});

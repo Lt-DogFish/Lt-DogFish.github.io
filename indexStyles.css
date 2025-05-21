@@ -18,6 +18,7 @@
 
 	--PrimaryRGB: 227, 227, 227;
 	--SecondaryRGB: 84, 84, 84;
+
 }
 
 
@@ -100,6 +101,16 @@
 	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
 	box-shadow: var(--Border1) 0px 0px 0px 2px inset ; 
 }
+
+.MenuTab.Special:hover
+{
+	background-position: bottom;
+	color: rgb(255, 230, 88);
+
+	transition: 0.3s cubic-bezier(.77,.12,.16,.95);
+	box-shadow: rgb(255, 230, 88) 0px 0px 0px 2px inset ; 
+}
+
 .MenuTab-noHoverAfterClick:hover {
 	float: left;
 	display: block;
@@ -146,6 +157,20 @@
   transform-origin: top;
   transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
 }
+
+.ElementWithUnderlineAnim.Special::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 230, 88);
+  transform-origin: top;
+  transition: transform 0.25s cubic-bezier(.77,.12,.16,.95);
+}
+
 .ElementWithUnderlineAnim:hover::after {
 	transform: scaleX(1);
 	transform-origin: bottom;

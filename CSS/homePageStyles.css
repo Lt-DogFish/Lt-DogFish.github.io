@@ -29,6 +29,7 @@
 .namepanelscontainer {
 	width: 100vw;
     height: 100vh;
+	will-change: transform;
     display: -webkit-flex; 
     flex-direction: column;
     justify-content: center;
