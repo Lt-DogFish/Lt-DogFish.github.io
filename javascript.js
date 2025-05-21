@@ -185,3 +185,34 @@ window.addEventListener("scroll", () => {
     el.style.transform = `translateY(${offset}px)`;
   });
 });
+
+/*
+function waitForDtTextAndStart() {
+  const dtText = document.getElementById("dtText");
+  if (!dtText) {
+    setTimeout(waitForDtTextAndStart, 100); // try again in 100ms
+    return;
+  }
+
+  let fps = 0;
+  let lastTime = 0;
+  let frames = 0;
+
+  function updateTime(time) {
+    const deltaTime = time - lastTime;
+    frames++;
+
+    if (deltaTime >= 1000) {
+      fps = frames;
+      frames = 0;
+      lastTime = time;
+    }
+
+    /*dtText.innerHTML = " | Current Date & Time: " + new Date().toLocaleString() + " | FPS: " + fps + " | ";
+    requestAnimationFrame(updateTime);
+  }
+
+  requestAnimationFrame(updateTime);
+}
+
+waitForDtTextAndStart();*/

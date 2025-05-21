@@ -6,6 +6,8 @@
 	--SpanCharactersAnimDuration: 1;
 
 	--CalulatedInitialDelay: calc((var(--BlurShrinkAnimDuration) + var(--NamePanelAnimDuration)) - 2)
+
+	
 }
 
 
@@ -16,6 +18,56 @@
 
 }
 
+.scroll-tracks-conainer {
+	position: absolute;
+}
+
+#marquee {
+	z-index: -10;
+  	width: 100vw;
+ 	
+  	overflow: hidden;
+ 	border: 1px solid rgb(225, 0, 255);  
+}
+
+.scrolling-track {
+  	display: flex;
+  	width: max-content;
+  	animation: slideImages 10s linear infinite;
+}
+
+.scrolling-track.reverse {
+  	display: flex;
+  	width: max-content;
+  	animation: slideImages-rev 10s linear infinite;
+}
+
+.scrolling-track img {
+  	width: 20vw;         /* match container width */
+  	height: auto;
+  	flex-shrink: 0;
+}
+
+/* Animation: move entire track left by (imageCount * imageWidth) px */
+@keyframes slideImages {
+  	0% {
+    	transform: translateX(0vw);
+  	}
+  	100% {
+    	transform: translateX(calc(-40vw)); /* 4 images * 100px width */
+  	}
+}
+
+@keyframes slideImages-rev {
+  	0% {
+    	transform: translateX(-40vw);
+  	}
+  	100% {
+    	transform: translateX(calc(0)); /* 4 images * 100px width */
+  	}
+}
+
+
 
 .namePanel {
 	overflow: hidden;
@@ -24,6 +76,7 @@
 	animation: NamePanelSlideOpenANIM calc(var(--NamePanelAnimDuration)* 1s) cubic-bezier(.77,.12,.16,.95);
 	animation-delay: calc(var(--BlurShrinkAnimDuration) * 1s);
 	animation-fill-mode: both;
+	backdrop-filter: blur(20px);
 }
 
 .namepanelscontainer {
@@ -39,14 +92,14 @@
 
 .top {
 	top: 25vh;
-	background-color: var(--Gray0_5);
-	color: var(--Gray3);
+	background-color: rgba(var(--PrimaryRGB),0.8);
+	color: rgba(var(--SecondaryRGB),1);
 }
 
 .bottom {
 	top:50vh;
-	background-color: var(--Gray3);
-	color: var(--Gray0_5);
+	background-color: rgba(var(--SecondaryRGB),0.8);
+	color: rgba(var(--PrimaryRGB),1);
 }
 
 
@@ -199,7 +252,29 @@
 	height: 300vh;
 	background-color: var(--Secondary);
 	color: var(--Primary);
+	box-shadow: var(--FlashColor) 0px 0px 0px 2px inset;
 }
+
+.drawer-grid {
+	align-content: flex-start;
+
+
+}
+
+.card {
+	box-shadow: white 0px 0px 0px 2px inset;
+	height: 30vw;
+	width: 30vw;
+}
+
+
+
+
+
+
+
+
+
 
 .about-container
 {
